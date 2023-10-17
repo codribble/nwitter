@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const Auth = () => {
   const [ email, setEmail ] = useState("");
-  const [password, setPassword ] = useState("");
+  const [ password, setPassword ] = useState("");
   const [ newAccount, setNewAccount ] = useState(true);
   const [ error, setError ] = useState("");
   const onChange = (e) => {
@@ -49,7 +49,7 @@ const Auth = () => {
       provider = new GithubAuthProvider();
     }
 
-    const data = await signInWithPopup(authService, provider);
+    await signInWithPopup(authService, provider);
   };
 
   return (
@@ -82,4 +82,5 @@ const Auth = () => {
     </div>
   );
 };
+
 export default Auth;
