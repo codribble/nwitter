@@ -64,6 +64,7 @@ const Nweet = ({ nweetObj, isOwner }) => {
         <>
           <h4>{nweetObj.text}</h4>
           {nweetObj.attachmentUrl && (
+            // eslint-disable-next-line jsx-a11y/alt-text
             <img
               src={nweetObj.attachmentUrl}
               width='50px'
